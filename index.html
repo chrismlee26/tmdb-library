@@ -1,12 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <title>Movie Trailer Searcher</title>
+    <style>
+      
+    </style>
+
+  </head>
+  <body>
+    <div class="container-left">
+      <img src=`{linkPoster}{poster}` alt='poster'></img>
+    </div>
+
+    <div class="container-right">
+      <h1 id="title"><!-- THIS IS THE MOVIE TITLE --><h1>
+      <p id="year"><!-- THIS IS THE YEAR --></p>
+      <p id="desc"><!-- THIS IS DESCRIPTION --></p>
+      <p id="desc"><!-- THIS IS DESCRIPTION --></p>
+
+
+      <form id="form">
+        <input
+          id="input-field"
+          type="text"
+          placeholder="Enter a Movie Title"
+          title="Movie Input"
+          required
+          />
+      </form>
+      <button type="submit">search</button> 
+    </div>
+    <script src='index.js' type='module'></script>
+  </body>
 </html>
