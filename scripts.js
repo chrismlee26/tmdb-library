@@ -7,7 +7,25 @@ async function getMovie(moviePath) {
   try {
     const res = await fetch(moviePath);
     const json = await res.json();
-    console.log(json)
+    // console.log(json)
+    // console.log(typeof(json))
+    const jsonArray = json.results
+    // console.log(jsonArray)
+
+    for (var i = 0; i < jsonArray.length; i++) {
+      const returnedArray = jsonArray[i]
+      console.log(returnedArray)
+      // const notNull = returnedArray.includes('poster_path')
+      // console.log(notNull)
+      return returnedArray.filter(function (el) {
+        console.log(el != null)
+      })
+    }
+
+
+
+
+
     const movieData = {
       title: json.results[0].original_title,
       date: json.results[0].release_date,
