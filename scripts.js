@@ -7,45 +7,48 @@ async function getMovie(moviePath) {
   try {
     const res = await fetch(moviePath);
     const json = await res.json();
+    console.log(json)
     const movieData = {
-      title: json.results.original_title,
-      date: json.results.release_date,
-      overview: json.results.overview,
-      poster: json.results.poster_path,
-      vote: json.results.vote_average,
-      
-
-    }
+      title: json.results[0].original_title,
+      date: json.results[0].release_date,
+      overview: json.results[0].overview,
+      poster: json.results[0].poster_path,
+      vote: json.results[0].vote_average,
+    };
     return movieData
   } catch (err) {
     return err;
   }
 }
 
+
+
 function getMovieByQuery(tmdbKey, query) {
   const moviePath = `${linkMovies}api_key=${tmdbKey}&query=${query}`;
   return getMovie(moviePath);
 }
 
-function getMoviePoster() { 
-  return `${linkPoster}${poster}`;
-}
+// function getMoviePoster() { 
+//   const 
+//   return `${linkPoster}${poster}`;
+// }
 
-function getYouTubeTrailer(VIDEO_ID, autoplay=1) {
-  const playTrailer = `${youTubeSearch}${VIDEO_ID}?${autoplay}`;
-  return playTrailer
-}
-
-
-
+// function getYouTubeTrailer(VIDEO_ID, autoplay=1) {
+//   const playTrailer = `${youTubeSearch}${VIDEO_ID}?${autoplay}`;
+//   return playTrailer
+// }
 
 
 
 
-function searchYouTube() {
 
-}
+
+
+// function searchYouTube() {
+
+// }
 
 export {
   getMovieByQuery,
+  getMovie,
 };

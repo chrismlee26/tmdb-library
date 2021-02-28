@@ -1,5 +1,9 @@
 # TMDB & Youtube API Search Library
 
+![GitHub language count](https://img.shields.io/github/languages/count/chrismlee26/tmdb-library)
+![GitHub top language](https://img.shields.io/github/languages/top/chrismlee26/tmdb-library)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/y/chrismlee26/tmdb-library)
+
 For FEW2.1 (Writing Javascript Libraries) at Make School. Assignment #4
 
 ## Welcome
