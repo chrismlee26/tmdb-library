@@ -93,3 +93,4 @@ typings/
 # .html (for API Key)
 /config.js
 /scriptsarray.js
+/scripts-2.js
