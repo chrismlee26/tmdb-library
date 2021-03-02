@@ -22,7 +22,7 @@ async function getMovie(moviePath) {
           vote: jsonArray[i].vote_average,
           id: jsonArray[i].id,
         };
-      console.log(allMovieData, '$$$$$$$$$')
+      // console.log(allMovieData, '$$$$$$$$$')
     }
 
     // THIS RETURNS THE FIRST RESULT ONLY  FROM QUERY
@@ -35,7 +35,7 @@ async function getMovie(moviePath) {
       id: jsonArray[0].id,
       
     };
-    console.log(movieData, '~~~~~~~~~~~~~~~~~')
+    // console.log(movieData, '~~~~~~~~~~~~~~~~~')
 
     // Logging all the returned image links but removing null values.
     // THIS RETURNS A LIST OF ALL POSSIBLE MOVIE POSTERS FROM QUERY
@@ -48,9 +48,9 @@ async function getMovie(moviePath) {
         }
         
     }
-    console.log(moviePosterArray, '@@@@@@@@@@@@')   
+    // console.log(moviePosterArray, '@@@@@@@@@@@@')   
     
-    return [entireArray, movieData, moviePosterArray]
+    return { movieData: movieData, allMoviesData: entireArray, allMoviePosters: moviePosterArray}
   } catch (err) {
     return err;
   }

@@ -1,6 +1,6 @@
 // import youTubeScript from 'https://apis.google.com/js/api.js';
 import { getMovieByQuery } from './scripts.js'; //, getPoster, getYouTubeTrailer
-import { tmdbKey, youTubeKey } from './config.js';
+import { tmdbKey } from './config.js';
 
 // Get Element References from DOM
 const titleElement = document.getElementById('title');
@@ -33,11 +33,12 @@ formElement.addEventListener('submit', async (e) => {
 
   getMovieByQuery(tmdbKey, input)
   .then((data) => {
-    titleElement.innerHTML = data.title;
-    yearElement.innerHTML = data.date;
-    descElement.innerHTML = `<i>${data.overview}</i>`;
-    ratingElement.innerHTML = `Rating: ${data.vote}`;
-    posterElement.innerHTML = `<img id='poster-load' src=${posterLink}${data.poster}></img>`;
+    console.log(data)
+    titleElement.innerHTML = data.movieData.title;
+    yearElement.innerHTML = data.movieData.date;
+    descElement.innerHTML = `<i>${data.movieData.overview}</i>`;
+    ratingElement.innerHTML = `Rating: ${data.movieData.vote}`;
+    posterElement.innerHTML = `<img id='poster-load' src=${posterLink}${data.movieData.poster}></img>`;
     }).catch((err) => console.log(err.message)); 
 });
 
@@ -46,30 +47,30 @@ formElement.addEventListener('submit', async (e) => {
 // "https://apis.google.com/js/api.js"
 
 
-  // function loadClient() {
-  //   gapi.client.setApiKey(youTubeKey);
-  //   return gapi.client.load("https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest")
-  //       .then(function() { console.log("GAPI client loaded for API"); },
-  //             function(err) { console.error("Error loading GAPI client for API", err); });
-  // }
-  // // Make sure the client is loaded before calling this method.
-  // function execute() {
-  //   return gapi.client.youtube.search.list({
-  //     "part": [
-  //       "snippet"
-  //     ],
-  //     "maxResults": 1,
-  //     "order": "relevance",
-  //     "q": "{data.title}",
-  //     "safeSearch": "none"
-  //   })
-  //       .then(function(response) {
-  //               // Handle the results here (response.result has the parsed body).
-  //               console.log("Response", response);
-  //             },
-  //             function(err) { console.error("Execute error", err); });
-  // }
-  // gapi.load("client");
+//   function loadClient() {
+//     gapi.client.setApiKey(youTubeKey);
+//     return gapi.client.load("https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest")
+//         .then(function() { console.log("GAPI client loaded for API"); },
+//               function(err) { console.error("Error loading GAPI client for API", err); });
+//   }
+//   // Make sure the client is loaded before calling this method.
+//   function execute() {
+//     return gapi.client.youtube.search.list({
+//       "part": [
+//         "snippet"
+//       ],
+//       "maxResults": 1,
+//       "order": "relevance",
+//       "q": "{data.title}",
+//       "safeSearch": "none"
+//     })
+//         .then(function(response) {
+//                 // Handle the results here (response.result has the parsed body).
+//                 console.log("Response", response);
+//               },
+//               function(err) { console.error("Execute error", err); });
+//   }
+//   gapi.load("client");
 
 // button onclick="loadClient()">load</
 // button onclick="execute()">execute</
