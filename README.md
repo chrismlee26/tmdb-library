@@ -8,9 +8,9 @@ For FEW2.1 (Writing Javascript Libraries) at Make School. Assignment #4
 
 ## Welcome
 
-This project is a JS library that searches TMDB API & Returns Movie Data and Searches YouTube for a trailer.
+This project is a JS library that searches TMDB API & Returns Movie Data.
 
-v1.0.0
+v1.0.1
 
 ## TMDB Library
 
@@ -28,7 +28,7 @@ The functions take input through a single input field and resolve to a promise t
 
 ## Run
 
-1. Insert your TMDB and YouTube API Keys into the `tmdbKey` & `youTubeKey` variables respectively.
+1. Insert your TMDB and YouTube API Keys into the `tmdbKey` 0variable.
 
 2. Run the HTML page in live server.
 

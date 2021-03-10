@@ -1,4 +1,3 @@
-// import youTubeScript from 'https://apis.google.com/js/api.js';
 import { getMovieByQuery } from './scripts.js'; //, getPoster, getYouTubeTrailer
 import { tmdbKey } from './config.js';
 
