@@ -1,0 +1,19 @@
+{
+  "name": "tmdb-library",
+  "version": "1.0.0",
+  "description": "![GitHub language count](https://img.shields.io/github/languages/count/chrismlee26/tmdb-library) ![GitHub top language](https://img.shields.io/github/languages/top/chrismlee26/tmdb-library) ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/chrismlee26/tmdb-library)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrismlee26/tmdb-library.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chrismlee26/tmdb-library/issues"
+  },
+  "homepage": "https://github.com/chrismlee26/tmdb-library#readme"
+}
